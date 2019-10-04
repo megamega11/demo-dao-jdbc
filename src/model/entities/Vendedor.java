@@ -12,14 +12,14 @@ public class Vendedor implements Serializable {
 	private Date dataNascimento;
 	private double salarioBase;
 
+
 	private Departamento departamento; // Associação de classes
 
 	public Vendedor() {
 
 	}
 
-	public Vendedor(Integer id, String nome, String email, Date dataNascimento, double salarioBase,
-			Departamento departamento) {
+	public Vendedor(Integer id, String nome, String email, Date dataNascimento, double salarioBase,Departamento departamento) {
 
 		this.id = id;
 		this.nome = nome;
@@ -85,7 +85,7 @@ public class Vendedor implements Serializable {
 		return result;
 	}
 
-	@Override
+	@Override 
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -97,7 +97,7 @@ public class Vendedor implements Serializable {
 		if (id == null) {
 			if (other.id != null)
 				return false;
-		} else if (!id.equals(other.id))
+		} else if (id.equals(other.id))
 			return false;
 		return true;
 	}
