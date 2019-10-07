@@ -13,6 +13,8 @@ public class Program {
 
 
 		VendedorDao vendedorDao = DaoFabrica.createvendedordao();
+		
+		
 		Vendedor vendedor = vendedorDao.findById(3);
 		
 		System.out.println(vendedor);
